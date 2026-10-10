@@ -1,0 +1,189 @@
+.page {
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 24px 70px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 8%, #daf5f6, transparent 33%),
+    linear-gradient(130deg, #eaf3f6, #f4f8fa 55%, #e8f2f2);
+}
+.glow {
+  position: absolute;
+  width: 560px;
+  height: 560px;
+  right: -180px;
+  bottom: -220px;
+  border-radius: 50%;
+  background: #b7e8e5;
+  filter: blur(95px);
+  opacity: 0.55;
+}
+.shell {
+  width: min(1050px, 100%);
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  gap: 70px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.intro {
+  padding: 10px;
+}
+.mark {
+  height: 58px;
+  width: 58px;
+  border-radius: 18px;
+  background: var(--accent);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 12px 25px #2a9cbc55;
+  margin-bottom: 45px;
+}
+.eyebrow,
+.step {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+}
+.intro h1 {
+  font-size: clamp(38px, 4.5vw, 58px);
+  letter-spacing: -0.055em;
+  line-height: 1.13;
+  margin: 18px 0 22px;
+  font-weight: 800;
+}
+.intro h1 em {
+  font-style: normal;
+  color: var(--accent);
+}
+.intro > p {
+  font-size: 16px;
+  line-height: 1.75;
+  max-width: 420px;
+  color: var(--muted);
+}
+.benefits {
+  display: grid;
+  gap: 13px;
+  margin-top: 42px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+.benefits span {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.benefits svg {
+  color: var(--accent);
+}
+.card {
+  background: var(--surface);
+  border: 1px solid #ffffffaa;
+  border-radius: 26px;
+  padding: 35px;
+  box-shadow: var(--shadow);
+}
+.cardHead h2 {
+  font-size: 27px;
+  letter-spacing: -0.035em;
+  margin: 12px 0 7px;
+}
+.cardHead p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0 0 27px;
+}
+.card form {
+  display: grid;
+  gap: 20px;
+}
+.password {
+  position: relative;
+}
+.password input {
+  padding-right: 52px;
+}
+.password button {
+  position: absolute;
+  right: 3px;
+  top: 2px;
+}
+.submit {
+  width: 100%;
+  margin-top: 4px;
+  min-height: 48px;
+}
+.error {
+  color: var(--danger);
+  font-size: 13px;
+  margin: 0;
+}
+.footer {
+  border-top: 1px solid var(--border);
+  margin-top: 26px;
+  padding-top: 22px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+.footer a {
+  display: inline-block;
+  font-weight: 700;
+}
+.note {
+  position: absolute;
+  bottom: 15px;
+  color: var(--muted);
+  font-size: 11px;
+  text-align: center;
+  left: 20px;
+  right: 20px;
+}
+@media (max-width: 800px) {
+  .shell {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    gap: 30px;
+  }
+  .intro {
+    text-align: center;
+  }
+  .mark {
+    margin: 0 auto 22px;
+  }
+  .intro h1 {
+    font-size: 38px;
+  }
+  .intro > p {
+    margin: 0 auto;
+  }
+  .benefits {
+    display: none;
+  }
+  .card {
+    padding: 28px;
+  }
+}
+@media (max-width: 440px) {
+  .page {
+    padding: 25px 15px 60px;
+  }
+  .card {
+    padding: 23px;
+  }
+  .intro h1 {
+    font-size: 32px;
+  }
+  .intro > p {
+    font-size: 14px;
+  }
+}

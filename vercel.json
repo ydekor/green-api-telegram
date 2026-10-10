@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/green.js": { "maxDuration": 60 }
+  },
+  "rewrites": [
+    { "source": "/api/green/:path*", "destination": "/api/green?path=:path*" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
